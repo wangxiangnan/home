@@ -10,6 +10,9 @@
     <template v-else-if="types.isVideo">
       <video :src="fileUrl" controls></video>
     </template>
+    <template v-else-if="types.isAudio">
+      <audio :src="fileUrl" controls></audio>
+    </template>
     <template v-else-if="types.isCanView">
       <iframe :src="fileUrl" frameborder="0"></iframe>
     </template>
@@ -30,6 +33,7 @@ export default {
     const setFileType = function(fileName) {
       types.value.isImage = /jpg|jpeg|png|gif/.test(fileName)
       types.value.isVideo = /mp4/.test(fileName)
+      types.value.isAudio = /mp3/.test(fileName)
       types.value.isCanView = /pdf|txt/.test(fileName)
     }
 

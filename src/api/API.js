@@ -23,3 +23,8 @@ export const ApiDelFileById = {
   url: '/upload/del',
   method: EnumMethod.Delete
 }
+
+export const ApiSignup = {
+  url: '/signup',
+  method: EnumMethod.Post
+}

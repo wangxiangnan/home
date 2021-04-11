@@ -85,9 +85,10 @@ const beforeRemove = function (file) {
 }
 const onSuccess = function (res) {
   if (res.errcode === 0) {
+    // TODO: 多个文件上传时，确定上传完毕
     // ctx.resetForm('fileForm')
     // ctx.$refs.upload.clearFiles()
-    ctx.$router.push({ name: 'FileList' })
+    // ctx.$router.push({ name: 'FileList' })
   }
 }
 
