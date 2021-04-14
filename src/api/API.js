@@ -28,3 +28,8 @@ export const ApiSignup = {
   url: '/signup',
   method: EnumMethod.Post
 }
+
+export const ApiLogin = {
+  url: '/login',
+  method: EnumMethod.Post
+}

@@ -23,3 +23,7 @@ export function getFileInfo (fileName, isToUpperCase=false) {
   }
   return { name, extension }
 }
+
+export function getFormattedTime () {
+
+}

@@ -4,7 +4,7 @@ import { BASE_URL } from '../config/index'
 
 const service = axios.create({
   baseURL: BASE_URL,
-  // withCredentials: true, // send cookies when cross-domain requests
+  withCredentials: true, // send cookies when cross-domain requests
   timeout: 5000
 })
 
@@ -23,6 +23,11 @@ service.interceptors.response.use(
     if (res.errcode === 0) {
       return res
     } else {
+      ElMessage({
+        type: 'error',
+        message: res.errmsg,
+        duration: 5 * 1000
+      })
       return Promise.reject(res.errmsg || 'error')
     }
   },

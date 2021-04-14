@@ -36,6 +36,11 @@
   resolved "https://registry.npm.taobao.org/@vitejs/plugin-vue/download/@vitejs/plugin-vue-1.2.1.tgz?cache=0&sync_timestamp=1617152725801&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vitejs%2Fplugin-vue%2Fdownload%2F%40vitejs%2Fplugin-vue-1.2.1.tgz#6de49436fc346f829a56676066428e3f011522ac"
   integrity sha1-beSUNvw0b4KaVmdgZkKOPwEVIqw=
 
+"@vue/cli-plugin-vuex@~4.5.0":
+  version "4.5.12"
+  resolved "https://registry.npm.taobao.org/@vue/cli-plugin-vuex/download/@vue/cli-plugin-vuex-4.5.12.tgz?cache=0&sync_timestamp=1616590583525&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vue%2Fcli-plugin-vuex%2Fdownload%2F%40vue%2Fcli-plugin-vuex-4.5.12.tgz#f7fbe177ee7176f055b546e9e74472f9d9177626"
+  integrity sha1-9/vhd+5xdvBVtUbp50Ry+dkXdiY=
+
 "@vue/compiler-core@3.0.11":
   version "3.0.11"
   resolved "https://registry.npm.taobao.org/@vue/compiler-core/download/@vue/compiler-core-3.0.11.tgz#5ef579e46d7b336b8735228758d1c2c505aae69a"
