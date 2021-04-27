@@ -203,6 +203,14 @@ dayjs@1.x:
   resolved "https://registry.npm.taobao.org/dayjs/download/dayjs-1.10.4.tgz#8e544a9b8683f61783f570980a8a80eaf54ab1e2"
   integrity sha1-jlRKm4aD9heD9XCYCoqA6vVKseI=
 
+echarts@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.npm.taobao.org/echarts/download/echarts-5.1.0.tgz#768cc585aa092560f48f01b2d52de493aeecd2b0"
+  integrity sha1-dozFhaoJJWD0jwGy1S3kk67s0rA=
+  dependencies:
+    tslib "2.0.3"
+    zrender "5.1.0"
+
 element-plus@^1.0.2-beta.38:
   version "1.0.2-beta.38"
   resolved "https://registry.npm.taobao.org/element-plus/download/element-plus-1.0.2-beta.38.tgz?cache=0&sync_timestamp=1617935634172&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Felement-plus%2Fdownload%2Felement-plus-1.0.2-beta.38.tgz#ada3b9de3d0c213b0de3df8bfff8b0e80cbc3776"
@@ -553,6 +561,11 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
+tslib@2.0.3:
+  version "2.0.3"
+  resolved "https://registry.nlark.com/tslib/download/tslib-2.0.3.tgz?cache=0&sync_timestamp=1618847132149&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftslib%2Fdownload%2Ftslib-2.0.3.tgz#8e0741ac45fc0c226e58a17bfc3e64b9bc6ca61c"
+  integrity sha1-jgdBrEX8DCJuWKF7/D5kubxsphw=
+
 uniq@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npm.taobao.org/uniq/download/uniq-1.0.1.tgz#b31c5ae8254844a3a8281541ce2b04b865a734ff"
@@ -598,3 +611,10 @@ yallist@^3.0.2:
   version "3.1.1"
   resolved "https://registry.npm.taobao.org/yallist/download/yallist-3.1.1.tgz#dbb7daf9bfd8bac9ab45ebf602b8cbad0d5d08fd"
   integrity sha1-27fa+b/YusmrRev2ArjLrQ1dCP0=
+
+zrender@5.1.0:
+  version "5.1.0"
+  resolved "https://registry.npm.taobao.org/zrender/download/zrender-5.1.0.tgz?cache=0&sync_timestamp=1618215769844&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fzrender%2Fdownload%2Fzrender-5.1.0.tgz#b6a84c3aa7ccc6642ee0519901ca4c0835c4d85e"
+  integrity sha1-tqhMOqfMxmQu4FGZAcpMCDXE2F4=
+  dependencies:
+    tslib "2.0.3"

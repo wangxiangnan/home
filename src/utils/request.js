@@ -4,8 +4,8 @@ import { BASE_URL } from '../config/index'
 
 const service = axios.create({
   baseURL: BASE_URL,
-  withCredentials: true, // send cookies when cross-domain requests
-  timeout: 5000
+  timeout: 35000,
+  withCredentials: true,
 })
 
 service.interceptors.request.use(
