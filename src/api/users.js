@@ -1,5 +1,5 @@
 import request from '../utils/request'
-import { ApiSignup, ApiLogin } from './API'
+import { ApiSignup, ApiLogin, ApiGetUserInfo } from './API'
 
 export function signup (data) {
   return request({
@@ -14,5 +14,12 @@ export function login (data) {
     url: ApiLogin.url,
     method: ApiLogin.method,
     data
+  })
+}
+
+export function fetchUserInfo () {
+  return request({
+    url: ApiGetUserInfo.url,
+    method: ApiGetUserInfo.method,
   })
 }

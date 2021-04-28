@@ -19,6 +19,7 @@
 
 <script>
 import { ref, getCurrentInstance } from 'vue'
+import { mapMutations } from 'vuex'
 import { login } from '../api/users'
 export default {
   setup() {
@@ -33,12 +34,17 @@ export default {
     const submitForm = (formName) => {
       ctx.$refs[formName].validate(async valid => {
         if (valid) {
-          await login(loginForm.value)
+          let { data } = await login(loginForm.value)
+          ctx.setUserinfo(data)
+          ctx.$router.replace({name: 'FileList'})
         }
       })
     }
 
     return { loginForm, rules, submitForm }
+  },
+  methods: {
+    ...mapMutations(['setUserinfo'])
   }
 }
 </script>

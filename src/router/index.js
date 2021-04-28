@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Layout from '../components/Layout/index.vue'
+import { fetchUserInfo } from '../api/users'
 
 const routes = [
   {
@@ -40,6 +41,22 @@ const routes = [
     ]
   },
   {
+    path: '/message',
+    name: 'Message',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: Layout,
+    redirect: '/message/list',
+    children: [
+      {
+        path: 'list',
+        name: 'MessageList',
+        component: () => import(/* webpackChunkName: "about" */ '../views/Message.vue')
+      }
+    ]
+  },
+  {
     path: '/preview',
     name: 'Preview',
     component: () => import(/* webpackChunkName: "about" */ '../views/Preview.vue')
@@ -49,6 +66,10 @@ const routes = [
 const router = createRouter({
   history: createWebHashHistory(),
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  next();
 })
 
 export default router

@@ -33,3 +33,8 @@ export const ApiLogin = {
   url: '/login',
   method: EnumMethod.Post
 }
+
+export const ApiGetUserInfo = {
+  url: '/getUserInfo',
+  method: EnumMethod.Get
+}

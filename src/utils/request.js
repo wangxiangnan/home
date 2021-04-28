@@ -1,9 +1,10 @@
 import axios from 'axios'
 import { ElMessage } from 'element-plus'
-import { BASE_URL } from '../config/index'
+import { API_URL } from '../config/index'
+import router from '../router'
 
 const service = axios.create({
-  baseURL: BASE_URL,
+  baseURL: API_URL,
   timeout: 35000,
   withCredentials: true,
 })
@@ -22,6 +23,8 @@ service.interceptors.response.use(
     const res = response.data
     if (res.errcode === 0) {
       return res
+    } else if(res.errcode === -1) {
+      router.replace({name: 'Login'})
     } else {
       ElMessage({
         type: 'error',
