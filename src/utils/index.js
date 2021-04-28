@@ -27,3 +27,8 @@ export function getFileInfo (fileName, isToUpperCase=false) {
 export function getFormattedTime () {
 
 }
+
+export function parseQueryStr(str) {
+  let arrSin = str.split('&')
+
+}

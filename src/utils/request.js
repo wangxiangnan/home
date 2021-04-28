@@ -25,6 +25,7 @@ service.interceptors.response.use(
       return res
     } else if(res.errcode === -1) {
       router.replace({name: 'Login'})
+      return Promise.reject(res.errmsg || 'error')
     } else {
       ElMessage({
         type: 'error',

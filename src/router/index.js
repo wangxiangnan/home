@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Layout from '../components/Layout/index.vue'
+import store from '../store/index'
 import { fetchUserInfo } from '../api/users'
 
 const routes = [
@@ -69,7 +70,18 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  next();
+  const whiteList = ['Login', 'Signup']
+  if (whiteList.indexOf(to.name) < 0) {
+    if (store.state.userinfo) { // logined
+      next()
+    } else {
+      console.log(document.cookie)
+      next()
+    }
+  } else {
+    next()
+  }
+  
 })
 
 export default router
