@@ -3,15 +3,21 @@
 </template>
 
 <script>
-import { onMounted } from 'vue'
+import { onMounted, getCurrentInstance } from 'vue'
+import { mapState } from 'vuex'
 export default {
   name: 'Home',
+  computed: {
+    ...mapState(['userinfo'])
+  },
   setup() {
+    const { ctx } = getCurrentInstance()
     const initCanvas = function() {
       const canvas = document.querySelector('#canvas')
-      const ctx = canvas.getContext('2d')
-      ctx.fillStyle = '#ff00ff'
-      ctx.fillRect(0, 0, 100, 100)
+      const canCtx = canvas.getContext('2d')
+      console.log(ctx.userinfo)
+      canCtx.fillStyle = '#ff00ff'
+      canCtx.fillRect(0, 0, 100, 100)
     }
     const setPageSize = function() {
 

@@ -2,7 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Layout from '../components/Layout/index.vue'
 import store from '../store/index'
-import { fetchUserInfo } from '../api/users'
+import { parseQueryStr } from '../utils/index'
 
 const routes = [
   {
@@ -75,8 +75,17 @@ router.beforeEach((to, from, next) => {
     if (store.state.userinfo) { // logined
       next()
     } else {
-      console.log(document.cookie)
-      next()
+      let cookies = parseQueryStr(document.cookie)
+      if (cookies['USER_SID']) { // has cookie
+        store.dispatch('getUserinfo')
+          .then(res => {
+            if (res.errcode === 0) {
+              next()
+            }
+          })
+      } else {
+        next({name: 'Login', replace: true})
+      }
     }
   } else {
     next()

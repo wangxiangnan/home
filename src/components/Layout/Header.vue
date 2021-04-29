@@ -6,7 +6,7 @@
         <i class="el-icon-s-unfold"></i>
         <span class="hidden-xs-only">首页</span>
       </el-menu-item>
-      <el-submenu index="/upload">
+      <el-submenu :index="null">
         <template #title>
           <i class="el-icon-share"></i>
           <span class="hidden-xs-only">共享文件</span>

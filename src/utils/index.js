@@ -6,7 +6,6 @@ export function triggerDownLoad (url, name) {
   a.download = name
   document.body.appendChild(a)
   a.click()
-  a.remove()
 }
 
 export function getFilePath (name) {
@@ -30,5 +29,16 @@ export function getFormattedTime () {
 
 export function parseQueryStr(str) {
   let arrSin = str.split('&')
+  const obj = Object.create(null)
+  let i, kvArr;
+  for (let i = 0; i<arrSin.length; i++) {
+    kvArr = arrSin[i].split('=')
+    obj[kvArr[0]] = kvArr[1]
+  }
+
+  return obj
+}
+
+export function getBrowserInfo() {
 
 }

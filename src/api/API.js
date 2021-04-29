@@ -6,7 +6,7 @@ const EnumMethod = {
 }
 
 export const ApiUpload = {
-  url: '/upload',
+  url: '/api/upload',
   method: EnumMethod.Post
 }
 export const ApiGetFileList = {
@@ -35,6 +35,6 @@ export const ApiLogin = {
 }
 
 export const ApiGetUserInfo = {
-  url: '/getUserInfo',
+  url: '/users/getUserInfo',
   method: EnumMethod.Get
 }
